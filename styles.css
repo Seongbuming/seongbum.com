@@ -1,0 +1,411 @@
+/* Main Variables */
+:root {
+    --main-color: #00205B; /* Sejong University blue */
+    --accent-color: #1E88E5;
+    --light-gray: #f5f5f5;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+    --hover-color: #e8f4fc;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    background-color: #fff;
+}
+
+/* Header Section */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-info {
+    flex: 1;
+}
+
+.profile-image-container {
+    width: 180px;
+    height: 220px;
+    margin-right: 30px;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover {
+    transform: scale(1.02);
+}
+
+.profile-image-container img {
+    width: 100%;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+h2 {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 8px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+h2 svg {
+    margin-right: 10px;
+}
+
+h3 {
+    color: var(--main-color);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+/* Contact Information */
+.contact-info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item svg {
+    color: var(--accent-color);
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+}
+
+/* Publication Section */
+.pub-year {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.pub-year:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 10px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.publication {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.publication:hover {
+    background-color: var(--hover-color);
+}
+
+.publication:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.authors {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.paper-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--main-color);
+}
+
+.venue {
+    font-style: italic;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.paper-links {
+    font-size: 0.9rem;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.paper-link {
+    color: white;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 15px;
+    background-color: var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.paper-link:hover {
+    transform: translateY(-2px);
+    background-color: var(--main-color);
+}
+
+/* Research Interests and Skills */
+.research-interests, .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.interest-tag, .skill-tag {
+    background-color: var(--light-gray);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, transform 0.2s;
+    border: 1px solid var(--border-color);
+}
+
+.interest-tag:hover, .skill-tag:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+/* Education and Experience Items */
+.education-item, .experience-item, .project-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.education-item:last-child, .experience-item:last-child, .project-item:last-child {
+    border-bottom: none;
+}
+
+.date {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.institution, .project-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+
+.position {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.responsibilities {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.responsibilities li {
+    margin-bottom: 5px;
+}
+
+/* Technologies */
+.technologies {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background-color: #e3f2fd;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--accent-color);
+}
+
+/* Awards Section */
+.award-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.award-icon {
+    color: goldenrod;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.award-content {
+    flex: 1;
+}
+
+.award-title {
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.award-year {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Languages Section */
+.language-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.language-icon {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.language-name {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.language-level {
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+}
+
+/* Section spacing */
+section {
+    margin-bottom: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profile-image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .header-info {
+        text-align: center;
+    }
+    
+    .contact-info {
+        align-items: center;
+    }
+    
+    .paper-links, .technologies, .research-interests, .skills-container {
+        justify-content: center;
+    }
+}
+
+/* Print styles for better printed output */
+@media print {
+    body {
+        padding: 0;
+        font-size: 12pt;
+    }
+    
+    .profile-image-container {
+        box-shadow: none;
+    }
+    
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    
+    .paper-link {
+        color: var(--text-color);
+        background-color: transparent;
+        border: 1px solid var(--border-color);
+    }
+    
+    h2 {
+        break-after: avoid;
+    }
+    
+    .education-item, .experience-item, .project-item, .publication {
+        break-inside: avoid;
+    }
+}
