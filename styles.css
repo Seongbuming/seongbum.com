@@ -365,16 +365,20 @@ section {
         margin-right: 0;
         margin-bottom: 20px;
     }
+
+    .header-info h1 {
+        text-align: center;
+    }
     
-    .header-info {
+    /* .header-info {
         text-align: center;
     }
     
     .contact-info {
         align-items: center;
-    }
+    } */
     
-    .paper-links, .technologies, .research-interests, .skills-container {
+    .technologies, .research-interests, .skills-container {
         justify-content: center;
     }
 }
