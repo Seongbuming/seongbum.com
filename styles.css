@@ -209,6 +209,68 @@ h3 {
     background-color: var(--main-color);
 }
 
+/* Patents Section */
+.patent-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    position: relative;
+    padding-left: 20px;
+}
+
+.patent-item:hover {
+    background-color: var(--hover-color);
+}
+
+.patent-item:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.patent-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--main-color);
+}
+
+.patent-authors {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.patent-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.patent-number {
+    font-weight: 500;
+}
+
+.patent-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .patent-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
 /* Research Interests and Skills */
 .research-interests, .skills-container {
     display: flex;
